@@ -1,6 +1,5 @@
 <?php
 
-require __DIR__ . '/../config.php';
 
 class Db
 {
@@ -8,6 +7,7 @@ class Db
 
     public function __construct()
     {
+        include __DIR__ . '/../config.php';
         $dsn = DB_DSN;
         $this->dbh = new PDO($dsn, DB_USER, DB_PASS);
     }
@@ -15,8 +15,7 @@ class Db
     public function execute(string $sql)
     {
         $sth = $this->dbh->prepare($sql);
-        $res = $sth->execute();
-        return $res;
-    }
+        return $sth->execute();
 
+    }
 }
