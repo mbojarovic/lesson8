@@ -11,4 +11,13 @@ class Db
         $dsn = DB_DSN;
         $this->dbh = new PDO($dsn, DB_USER, DB_PASS);
     }
+
+    public function execute(string $sql)
+    {
+        $sth = $this->dbh->prepare($sql);
+        $res = $sth->execute();
+        var_dump($res);
+        return $res;
+    }
+
 }
