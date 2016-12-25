@@ -1,6 +1,7 @@
 <?php
 
 require __DIR__ . '/classes/Db.php';
+require __DIR__ . '/classes/View.php';
 
 $db = new Db();
 $data1 = $db->query(
