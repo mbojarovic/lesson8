@@ -8,7 +8,7 @@ $newsOne = new News();
 if (isset($_GET['id'])) {
     $id  = $_GET['id'];
 } else {
-    header('location: /lesson8/3/news.php');
+    header('location: /lesson8/3/index.php');
 }
 
 $view = new View();

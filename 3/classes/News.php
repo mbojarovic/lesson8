@@ -10,7 +10,7 @@ class News
         return $data = $db->query('SELECT * FROM News ORDER BY id DESC');
     }
 
-    public function getOneArticle($id)
+    public function getOneArticle(int $id)
     {
         $db = new Db();
         return $data = $db->query('SELECT * FROM News WHERE id=:id', [':id' => $id]);
