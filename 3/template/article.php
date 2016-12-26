@@ -51,7 +51,7 @@
     <div class="row">
 
         <div class="col-sm-8 blog-main">
-<?php //var_dump($this->data['newsOne'])?>
+
                 <div class="blog-post">
                     <h2 class="blog-post-title">
                             <?php echo $this->data['newsOne'][0]->newsTitle ?></a></h2>

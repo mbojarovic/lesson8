@@ -7,7 +7,7 @@ class News
     public function getAllArticles()
     {
         $db = new Db();
-        return $data = $db->query('SELECT * FROM News');
+        return $data = $db->query('SELECT * FROM News ORDER BY id DESC');
     }
 
     public function getOneArticle($id)
